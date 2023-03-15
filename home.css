@@ -1,0 +1,578 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*Responsive Navigation Bar*/
+
+.logo {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.nav {
+    height: 0px;
+    width: 100%;
+    position: relative;
+    background-color: #EADDCA;
+
+}
+
+.nav>.nav-header {
+    display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: black;
+    padding: 20px 10px 10px 20px;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 20px 10px 13px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav>.nav-links>a:hover {
+    text-decoration: none;
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+@media (max-width:710px) {
+
+    .nav>.nav-header>.nav-title {
+        display: inline-block;
+        font-size: 16px;
+        color: black;
+        padding: 22px 10px 15px 20px;
+    }
+
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 18px 0px 0px 10px;
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid black;
+    }
+
+    .nav>.nav-links {
+        font-size: 16px;
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: white;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 60px;
+        left: 0px;
+        z-index: 999;
+    }
+
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+/*First Section*/
+
+/* Create two equal columns that floats next to each other */
+
+.greet {
+    width: 28ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 20px;
+    line-height: 24.5px;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+.freen {
+    display: block;
+    width: auto;
+    max-width: 50%;
+    margin-left: auto;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 50px 0px 0px 0px;
+    height: auto;
+}
+
+section {
+    background-color: #EADDCA;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    padding-bottom: 40px;
+}
+
+.para{
+    margin: auto;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.brunei {
+    color: black;
+}
+
+.brunei:hover {
+    color: white;
+    background-color: black;
+}
+
+/* unvisited link */
+.brunei:link {
+    color: black;
+  }
+  
+  /* visited link */
+  .brunei:visited {
+    color: black;
+    background-color: white;
+  }
+  
+  /* selected link */
+  .brunei:active {
+    color: black;
+  }
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+
+    .freen {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .greet {
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -50px;
+    }
+
+    .para {
+        text-align: center;
+
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .greet {
+        font-size: 18px;
+    }
+
+    .para {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .greet {
+        font-size: 16px;
+        padding-right: 30px;
+    }
+
+    .para {
+        font-size: 12px;
+        padding-right: 30px;
+    }
+
+    .freen {
+        max-width: 50%;
+    }
+}
+
+
+/*Second Section*/
+
+.secondSection {
+    background-color: black;
+    padding: 30px;
+}
+
+.h2 {
+    color: white;
+    text-align: center;
+}
+
+.h3 {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 30px;
+}
+
+.skillist {
+    color: white;
+    list-style-type: none;
+    text-align: center;
+}
+
+.code {
+    display: inline;
+    font-size: 24px;
+    padding: 80px;
+}
+
+@media screen and (max-width: 1056px) {
+    .code {
+        padding: 28px;
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 592px) {
+    .code {
+        padding: 8px;
+        font-size: 16px;
+        padding-right: 10%;
+    }
+
+    .h2 {
+        font-size: 18px;
+    }
+
+    .h2 {
+        color: white;
+        text-align: center;
+    }
+
+    .h3 {
+        color: white;
+        text-align: center;
+        font-size: 14px;
+        padding-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width: 521px) {
+    .code {
+        font-size: 16px;
+        display: block;
+        padding-right: 16%;
+        font-size: 18px;
+    }
+
+}
+
+/*Third Section*/
+
+.build {
+    float: left;
+    width: 50%;
+    padding: 25px;
+    height: auto;
+    padding-bottom: 40px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.thirdSection:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button {
+    background-color: #EADDCA;
+    color: black;
+    border: 3px solid black;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+.title{
+    font-size: 22px;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+    .build {
+        width: 100%;
+    }
+    .description{
+        font-size: 13px;
+    }
+    .button{
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .title{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .description{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .description{
+        font-size: 12px;
+    }
+
+    .title{
+        font-size: 16px;
+    }
+
+    .button{
+        font-size: 14px;
+        padding: 8px;
+    }
+
+}
+
+/*Fourth Section*/
+
+.contact {
+    float: left;
+    width: 50%;
+    padding: 40px;
+  }
+
+.fourthSection{
+    background-color: black;
+    color: white;
+}
+  
+  /* Clear floats after the columns */
+  .fourthSection:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.fourthSection > .contact > .emoji {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.fourthSection > .contact > .anytime {
+    font-size: 18px;
+}
+
+.work{
+    padding-bottom: 18px;
+    margin-right: 40px;
+}
+
+.contactMe {
+    background-color: #EADDCA;
+    color: black;
+    border: 3px solid black;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.contactMe:hover {
+    background-color: black;
+    color:#EADDCA;
+    border: 3px solid #EADDCA;
+}
+
+@media screen and (max-width: 425px) {
+
+    .contact {
+        width: 100%;
+        padding: 4px;
+        padding-bottom: 30px;
+    }
+
+    .fourthSection > .contact > .emoji {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .fourthSection > .contact > .anytime {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .work{
+        text-align: center;
+        margin-right: 0px;
+        margin-top: -20px;
+    }
+
+    .contactMe{
+        display: flex;
+        width: 40%;
+        justify-content: center;
+        margin: auto;
+
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .fourthSection > .contact > .emoji {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .work {
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+
+    .contactMe{
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+
+/*Footer*/
+
+.ending{
+    float: left;
+    width: 50%;
+    background-color: #EADDCA;
+    padding: 2px;
+  }
+
+  .footer{
+    color: black;
+    font-weight: bolder;
+}
+  
+  /* Clear floats after the columns */
+  .footer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.copyright{
+    padding-left: 20px;
+}
+
+.email{
+    text-align: right;
+    padding-right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .ending {
+        width: 100%;
+    }
+
+    .copyright{
+        text-align: center;
+    }
+
+    .email{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ending {
+        font-size: 12px;
+    }
+
+    
+}
+
+
+

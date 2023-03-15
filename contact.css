@@ -1,0 +1,347 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+}
+
+/*Responsive Navigation Bar*/
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav {
+    height: 0px;
+    width: 100%;
+    position: relative;
+
+}
+
+.nav>.nav-header {
+    display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: white;
+    padding: 20px 10px 10px 20px;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 20px 10px 13px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav>.nav-links>a:hover {
+    text-decoration: none;
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+@media (max-width:710px) {
+
+    .nav>.nav-header>.nav-title {
+        display: inline-block;
+        font-size: 16px;
+        color: black;
+        padding: 22px 10px 15px 20px;
+    }
+
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 18px 0px 0px 10px;
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid white;
+    }
+
+    .nav>.nav-links {
+        font-size: 16px;
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: white;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 60px;
+        left: 0px;
+        z-index: 999;
+    }
+
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+        color: black;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+/*First Section*/
+
+.firstContent {
+    padding: 200px 200px 200px 200px;
+    text-align: center;
+    margin: auto;
+}
+
+.heading2 {
+    color: white;
+}
+
+.caption {
+    color: white;
+}
+
+@media (max-width:710px) {
+    .firstContent {
+        padding: 100px;
+        margin: auto;
+    }
+
+    .heading2 {
+        font-size: 20px;
+    }
+
+    .caption {
+        font-size: 16px;
+    }
+}
+
+/*Second Section*/
+
+.beige {
+    background-color: #EADDCA;
+    height: auto;
+    padding: 20px;
+    width: auto;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.secContent {
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+.webdev {
+    color: black;
+}
+
+
+
+/*Contact Form*/
+
+.form-title {
+    text-align: center;
+    font-size: 24px;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+.submit {
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+fieldset {
+    padding: 30px;
+    border: 0px #EADDCA;
+}
+
+input,
+textarea
+ {
+    width: 100%;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+textarea {
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+label {
+    font-size: 16px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 40px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        padding: 0px;
+        margin-top: -120px;
+    }
+
+    .follow {
+        padding: 0px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .column {
+        padding: 0px
+    }
+
+    .mail {
+        font-size: 14px;
+    }
+
+    .linkedin {
+        font-size: 14px;
+    }
+
+    .phone {
+        font-size: 14px;
+    }
+}
+
+.follow {
+    margin-top: 140px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.mail {
+    color: black;
+}
+
+.mail:hover {
+    color: white;
+    background-color: black;
+}
+
+.linkedin {
+    color: black;
+}
+
+.linkedin:hover {
+    color: white;
+    background-color: black;
+}
+
+.icon {
+    font-size: 12px;
+}
+
+/*Footer*/
+.ending {
+    float: left;
+    width: 50%;
+    background-color: black;
+    padding: 2px;
+}
+
+.footer {
+    color: white;
+    font-weight: bolder;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.copyright {
+    padding-left: 20px;
+}
+
+.email {
+    text-align: right;
+    padding-right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .ending {
+        width: 100%;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    .email {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ending {
+        font-size: 12px;
+    }
+
+
+}
